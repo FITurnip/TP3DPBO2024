@@ -24,7 +24,7 @@ class CardView extends View {
 
     public function set_cards($datas, $placeholders) {
         $template = '<div class="col gx-2 gy-3 justify-content-center">
-            <a href="__DETAIL_URL__">
+            <a href="__DETAIL_URL__?id=__DETAIL_ID__">
                 <div class="card pt-4 px-2 pengurus-thumbnail">
                     <div class="row justify-content-center">
                         <img src="../assets/images/__IMAGENAME__" class="card-img-top" alt="__IMAGENAME__">
@@ -53,6 +53,7 @@ class CardView extends View {
         $this->replace('__TITLE__', $this->title);
         $this->set_cards($content["datas"], $content["placeholders"]);
         $this->replace('__CARDS__', $this->cards);
+        $this->replace('__DETAIL_URL__', $content["detail_url"]);
     }
 
     public function get_view() {

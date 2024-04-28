@@ -39,6 +39,14 @@ class DB
         return mysqli_affected_rows($this->conn);
     }
 
+    function getConn() {
+        return $this->conn;
+    }
+
+    function getInsertId() {
+        return mysqli_insert_id($this->conn);
+    }
+
     function close()
     {
         mysqli_close($this->conn);

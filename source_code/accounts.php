@@ -18,8 +18,9 @@ if (isset($_GET['search'])) {
 $card_view->insert_content([
     "title" => "Accounts",
     "datas" => $datas,
+    "detail_url" => "account.php",
     "placeholders" => [
-        "__DETAIL_URL__" => "detail_url",
+        "__DETAIL_ID__" => "account_id",
         "__IMAGENAME__" => "imagename",
         "__DATA0__" => "name",
         "__DATA1__" => "username",

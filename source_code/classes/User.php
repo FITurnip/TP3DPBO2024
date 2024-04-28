@@ -21,8 +21,8 @@ class User extends Resource
         return $this->store_data($request);
     }
 
-    public function update($request) {
-        return $this->update_data($request);
+    public function update($oldData, $request) {
+        return $this->update_data($oldData, $request);
     }
 
     public function destroy($column, $value) {
